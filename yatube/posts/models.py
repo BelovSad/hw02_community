@@ -11,7 +11,7 @@ class Post(models.Model):
         User,
         on_delete=models.CASCADE,
         related_name='posts'
-        )
+    )
     group = models.ForeignKey(
         'Group',
         on_delete=models.SET_NULL,
@@ -20,7 +20,7 @@ class Post(models.Model):
         related_name='posts',
         verbose_name='Группа',
         help_text='Группа, к которой будет относиться пост'
-        )
+    )
 
 
 class Group(models.Model):
